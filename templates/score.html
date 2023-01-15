@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title  %}
+    {{title}}
+{% endblock %}
+
+{% block content  %}
+    <center>
+        <div class="p-5"></div>
+            <div class="card">
+                <h1 class="p-2"> {{header}} </h1>
+            </div>
+                <img width="400" class="p-5"  src={{img}}
+                alt="image" />
+            <h3 class="p-2">Score: {{SCORE}} / {{TOTAL_SCORE}}</h3>
+            <br><br>
+                    <br>
+                    <h6><u>Screening Guide</u></h6>
+                    Points:<br>
+                    <p>{{line1}}</p>
+                    <p>{{line2}}</p>
+                    <p>{{line3}}</p>
+                    <p>{{line4}}</p>
+                <br><br>
+            <form method="POST" action="/score">
+                <center><input type="submit" class="btn btn-danger" style="background-color:rgba(26, 36, 50,0.8); border-color:white;" value"Close"/></center>
+            </form>
+            <br>    
+            <br>
+            <br>
+    </center>
+{% endblock %}
